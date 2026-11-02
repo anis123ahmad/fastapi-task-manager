@@ -18,3 +18,11 @@ def about():
         "project": "FastAPI Task Manager",
         "version": "1.0"
     }
+
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy",
+        "service": "task-manager"
+    }
